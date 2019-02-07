@@ -14,7 +14,9 @@ services:
     volumes:
       - mailtrain-redis-data:/data
   mailtrain:
-    image: mailtrain:latest
+    image: shivamgupta211/mailtrain:0.0.1
+    ports:
+      - 80:3000
     depends_on:
       - mysql
       - redis
